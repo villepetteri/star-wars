@@ -1,0 +1,22 @@
+{
+  "name": "star-wars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/villepetteri/star-wars.git"
+  },
+  "author": "Ville Harjunen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/villepetteri/star-wars/issues"
+  },
+  "homepage": "https://github.com/villepetteri/star-wars#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

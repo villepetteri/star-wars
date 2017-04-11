@@ -1,0 +1,23 @@
+{
+  "name": "star-wars",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ville Harjunen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/villepetteri/star-wars",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularUtils-pagination": "angular-utils-pagination#^0.11.1",
+    "angular-route": "^1.6.4",
+    "angular-scroll": "^1.0.0",
+    "font-awesome": "^4.7.0"
+  }
+}

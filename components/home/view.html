@@ -1,0 +1,58 @@
+<!-- Image header -->
+<div class="header">
+	<img class="img-header" src="/img/star-wars-header.jpg" alt="Header image">
+	<div class="title-box">
+		<span class="title-text">STAR WARS FILMS</span>
+	</div>
+</div>
+
+<!-- Films listing -->
+<div class="container" id="films-list">
+
+	<div class="sort-container">
+		<div class="sort-box text-right">
+
+			<span class="sort">SORT:</span>
+
+			<a ng-click="sortBy('Title')" class="sort-button" ng-class="{active: sortType == 'Title'}">
+				<span class="fa fa-sort" ng-class="{'fa-sort-desc': sortType == 'Title' && !sortReverse, 'fa-sort-asc': sortType == 'Title' && sortReverse, active: sortType == 'Title'}"></span>
+				<span>TITLE</span>
+			</a>
+
+			<a ng-click="sortBy('Year')" class="sort-button" ng-class="{active: sortType == 'Year'}">
+				<span class="fa fa-sort" ng-class="{'fa-sort-desc': sortType == 'Year' && !sortReverse, 'fa-sort-asc': sortType == 'Year' && sortReverse, active: sortType == 'Year'}"></span>
+				<span>YEAR</span>
+			</a>
+
+		</div>
+	</div>
+
+	<div class="film-container">
+
+		<div dir-paginate="film in films  | orderBy: sortType : sortReverse | itemsPerPage: 8" class="film-box">
+			<div class="film text-center" ng-click="showInImdb(film.imdbID)">
+
+				<!-- Poster -->
+				<div class="film-poster">
+					<img ng-src="{{film.Poster}}" alt="Poster" ng-if="film.Poster != 'N/A'">
+					<!-- If poster is not defined, show STAR WARS logo -->
+					<img src="/img/star-wars-logo.png" alt="Poster" ng-click="showInImdb(film.imdbID)" ng-if="film.Poster == 'N/A'">
+				</div>
+
+				<!-- Year -->
+				<div class="film-year">
+					{{film.Year}}
+				</div>
+
+				<!-- Title -->
+				<div class="film-title">
+					{{film.Title}}
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<dir-pagination-controls class="text-center" on-page-change="scrollToTop()"></dir-pagination-controls>
+
+</div>

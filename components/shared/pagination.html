@@ -1,0 +1,24 @@
+<ul class="pagination">
+
+	<!-- Previvous page button -->
+	<li class="text-left" ng-class="{ disabled : pagination.current == 1 }">
+		<button class="pagination-link" ng-click="setCurrent(pagination.current - 1)">
+			<span class="fa fa-caret-left"></span>
+			Previous page
+		</button>
+	</li>
+
+	<!-- Current page number -->
+	<li>
+		<span class="pagination-current">{{pagination.current}}</span>
+	</li>
+
+	<!-- Next page button -->
+	<li class="text-right" ng-class="{ disabled : pagination.current == pagination.last }">
+		<button class="pagination-link" ng-click="setCurrent(pagination.current + 1)">
+			Next page
+			<span class="fa fa-caret-right"></span>
+		</button>
+	</li>
+
+</ul>
