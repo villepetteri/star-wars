@@ -2,6 +2,7 @@
 Rekrytehtävä Franticille
 ## Asennusohjeet
 `Bower`, `npm` ja `Node.js` tarvitaan ohjelman asentamiseen ja suorittamiseen.
+
 Asenna tarvittavat kirjastot seuraavilla komennoilla:
 * `npm install`
 * `bower install`
